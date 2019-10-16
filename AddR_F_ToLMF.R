@@ -56,6 +56,6 @@ LMF_EcoSite <- LMF_EcoSite %>% dplyr::select(-EcoSiteId_Stripped)
 
 #Bind LMF and TerrADat
 #Make sure same number of columns and same names
-TerrADat[setdiff(names(LMF) , names(TerrADat))] <- NA
-LMF[setdiff(names(TerrADat), names(LMF))] <- NA
+TerrADat[setdiff(names(LMF_EcoSite) , names(TerrADat))] <- NA
+LMF_EcoSite[setdiff(names(TerrADat), names(LMF_EcoSite))] <- NA
 TDat_LMF <- rbind(TerrADat , LMF_EcoSite)
