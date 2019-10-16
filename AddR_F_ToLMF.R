@@ -53,5 +53,7 @@ LMF_EcoSite <- LMF_EcoSite %>% dplyr::rename(EcologicalSiteId = new_es_symbol)
 LMF_EcoSite <- LMF_EcoSite %>% dplyr::select(-EcoSiteId_Stripped)
 
 #Bind LMF and TerrADat
-
+#Make sure same number of columns and same names
+TerrADat[setdiff(names(LMF) , names(TerrADat))] <- NA
+LMF[setdiff(names(TerrADat), names(LMF))] <- NA
 TDat_LMF <- rbind(TerrADat , LMF_EcoSite)
