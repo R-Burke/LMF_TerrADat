@@ -12,7 +12,9 @@ library(dplyr)
 #Connect to TerrADat and LMF using SQL
 #Connect to TerrADat
 
-TerrADat <- sqlQuery(conn, 'SELECT * FROM .......TerrADat;') #omitted file path, email me if you don't know it
+conn <- odbcConnect("DataBaseName") #AIM Database name, see tutorial on working with AIM data on BLM computer
+
+TerrADat <- sqlQuery(conn, 'SELECT * FROM .......TerrADat;') #omitted file path here, see tutorial
 
 #Connect to LMF
 LMF <- sqlQuery(conn, 'SELECT * FROM .......LMF;')  #omitted file path, email me if you don't know it
