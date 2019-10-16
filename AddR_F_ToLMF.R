@@ -17,7 +17,7 @@ conn <- odbcConnect("DataBaseName") #AIM Database name, see tutorial on working 
 TerrADat <- sqlQuery(conn, 'SELECT * FROM .......TerrADat;') #omitted file path here, see tutorial
 
 #Connect to LMF
-LMF <- sqlQuery(conn, 'SELECT * FROM .......LMF;')  #omitted file path, email me if you don't know it
+LMF <- sqlQuery(conn, 'SELECT * FROM .......LMF;')  #omitted file path here, see tutorial
 
 #Read in full Ecological Site Id table from EDIT
 
