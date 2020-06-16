@@ -49,11 +49,6 @@ Combine_AIM_LMF <- function(TerrADat_Path, EDIT_List_Path){
                    TerrADat[setdiff(names(LMF_EcoSite) , names(TerrADat))] <- NA
                    LMF_EcoSite[setdiff(names(TerrADat), names(LMF_EcoSite))] <- NA
                    
-                   #Bind LMF and TerrADat
-                   #Place NAs in non-matching columns
-                   TerrADat[setdiff(names(LMF_EcoSite) , names(TerrADat))] <- NA
-                   LMF_EcoSite[setdiff(names(TerrADat), names(LMF_EcoSite))] <- NA
-                   
                    output <- rbind(TerrADat , LMF_EcoSite)
                    return(output)
                     
